@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Legacy — country music built on family. Live country music for fairs, festivals, churches, parties and community events.">
+  <title>Legacy | Country Music • Built on Family</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero" id="home">
+    <div class="hero-shade"></div>
+    <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="top-menu" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#music">Our Music</a>
+      <a href="#book">Book Us</a>
+      <button class="nav-band-button" type="button" data-open-band>Meet the Band</button>
+    </nav>
+
+    <div class="hero-copy">
+      <img class="legacy-logo" src="images/legacy-logo-cream.png" alt="Legacy">
+      <p>COUNTRY MUSIC <span>◆</span> BUILT ON FAMILY</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="video-wrap" aria-label="Featured video">
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube.com/embed/d0xxzeOhaEQ?rel=0"
+          title="Legacy — Live at the Market"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <section class="action-stack" aria-label="Explore Legacy">
+      <a class="action-card teal" href="#music">
+        <span class="icon-box">♫</span>
+        <span class="action-text"><strong>OUR MUSIC</strong><small>Country favorites &amp; more</small></span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="action-card rust" href="https://www.youtube.com/watch?v=d0xxzeOhaEQ" target="_blank" rel="noopener">
+        <span class="icon-box">▶</span>
+        <span class="action-text"><strong>WATCH MORE VIDEOS</strong><small>Live performances &amp; more</small></span>
+        <span class="arrow">›</span>
+      </a>
+
+      <a class="action-card gold" href="#book">
+        <span class="icon-box">▣</span>
+        <span class="action-text"><strong>BOOK US</strong><small>Parties • Festivals • Events</small></span>
+        <span class="arrow">›</span>
+      </a>
+
+      <button class="action-card red" type="button" data-open-band>
+        <span class="icon-box">●●●</span>
+        <span class="action-text"><strong>MEET THE BAND</strong><small>Get to know Legacy</small></span>
+        <span class="arrow">›</span>
+      </button>
+    </section>
+
+    <section class="content-panel" id="music">
+      <p class="eyebrow">OUR MUSIC</p>
+      <h2>Country music the whole family can enjoy.</h2>
+      <p>Legacy brings together timeless country favorites, the sound of the ’90s, newer songs and family harmonies—performed live by a real family band.</p>
+      <div class="music-chips">
+        <span>Classic Country</span><span>’90s Country</span><span>Modern Country</span><span>Family Harmonies</span>
+      </div>
+    </section>
+
+    <section class="content-panel booking" id="book">
+      <p class="eyebrow">BOOK LEGACY</p>
+      <h2>Bring live country music to your event.</h2>
+      <p>Available for fairs, festivals, churches, community gatherings, private parties and family-friendly events.</p>
+      <a class="contact-button" href="mailto:YOUR-EMAIL-HERE?subject=Booking%20Legacy">Contact Us About a Date</a>
+      <p class="edit-note">Replace <strong>YOUR-EMAIL-HERE</strong> in <code>index.html</code> with your booking email.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p class="saint">— ♡ St. Cecilia, Pray for Us ♡ —</p>
+    <p class="footer-tag">Legacy • Country Music Built on Family</p>
+  </footer>
+
+  <div class="modal" id="band-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-band></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="band-title">
+      <button class="close-button" type="button" aria-label="Close Meet the Band" data-close-band>×</button>
+      <div class="modal-heading">
+        <p class="eyebrow">THE FAMILY BEHIND THE MUSIC</p>
+        <h2 id="band-title">Meet the Band</h2>
+      </div>
+
+      <div class="member-grid">
+        <article class="member-card">
+          <img src="images/members/alaina.jpg" alt="Alaina holding an acoustic guitar">
+          <div><h3>Alaina</h3><p class="role">Vocals • Acoustic Guitar</p><p>As the oldest sibling, Alaina naturally helps lead the way. She picked up guitar quickly and pairs confident rhythm playing with a strong lead voice and a natural ear for harmony.</p></div>
+        </article>
+
+        <article class="member-card">
+          <img src="images/members/maggie.jpg" alt="Maggie holding a microphone">
+          <div><h3>Maggie</h3><p class="role">Vocals • Piano &amp; Keys</p><p>Maggie has played piano since age five. Her gentle personality, clear voice and close harmony with Alaina bring warmth to the Legacy sound.</p></div>
+        </article>
+
+        <article class="member-card">
+          <img src="images/members/luke.jpg" alt="Luke holding drumsticks">
+          <div><h3>Luke</h3><p class="role">Drums</p><p>Luke learned the basics from Dad and then made the drums his own. He takes rehearsals seriously and keeps the whole band tight and moving.</p></div>
+        </article>
+
+        <article class="member-card">
+          <img src="images/members/jake.jpg" alt="Jake holding a blue bass guitar">
+          <div><h3>Jake</h3><p class="role">Bass</p><p>Jake started bass because the band needed one, then discovered that he loved the groove. He experiments with sounds and serves as the group’s dependable comic relief.</p></div>
+        </article>
+
+        <article class="member-card">
+          <img src="images/members/tim.jpg" alt="Tim holding an electric guitar">
+          <div><h3>Tim</h3><p class="role">Guitar • Vocals</p><p>Dad started the band and now mostly tries to keep up with the kids—while playing guitar, singing and serving as tour-bus driver because he is the only one old enough to drive.</p></div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
