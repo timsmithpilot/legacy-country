@@ -84,3 +84,222 @@ body.modal-open{overflow:hidden}
   .hero{background-position:center 44%}
   .action-stack{grid-template-columns:1fr 1fr}
 }
+/* =====================================================
+   OUR MUSIC POP-UP
+   ===================================================== */
+
+.music-modal {
+  display: none;
+  position: fixed;
+  z-index: 60;
+  inset: 0;
+}
+
+.music-modal.open {
+  display: block;
+}
+
+.music-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 5, 3, 0.9);
+  backdrop-filter: blur(6px);
+}
+
+.music-modal-panel {
+  position: relative;
+  width: min(94%, 900px);
+  height: min(92vh, 850px);
+  margin: 4vh auto;
+  overflow: hidden;
+  border: 2px solid rgba(243, 232, 207, 0.65);
+  border-radius: 20px;
+  background:
+    url("images/railroad.jpg")
+    center center / cover
+    no-repeat;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.9),
+    0 0 0 5px rgba(20, 12, 7, 0.45);
+}
+
+.music-photo-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(15, 9, 5, 0.72) 0%,
+      rgba(15, 9, 5, 0.47) 38%,
+      rgba(15, 9, 5, 0.62) 100%
+    );
+}
+
+.music-close-button {
+  position: absolute;
+  z-index: 4;
+  top: 15px;
+  right: 15px;
+  width: 46px;
+  height: 46px;
+  border: 1px solid rgba(243, 232, 207, 0.7);
+  border-radius: 50%;
+  background: rgba(29, 20, 14, 0.86);
+  color: var(--cream);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.music-close-button:hover {
+  background: rgba(155, 52, 44, 0.95);
+}
+
+.music-modal-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  padding:
+    clamp(45px, 7vh, 75px)
+    clamp(18px, 5vw, 55px)
+    35px;
+  overflow-y: auto;
+  text-align: center;
+  color: var(--cream);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.95);
+}
+
+.music-modal-logo {
+  display: block;
+  width: min(76%, 520px);
+  max-height: 180px;
+  object-fit: contain;
+  margin: 0 auto 2px;
+}
+
+.music-sample-heading {
+  margin: 0 0 23px;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.song-list {
+  display: grid;
+  width: min(100%, 620px);
+  gap: 12px;
+}
+
+.song-button {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  align-items: center;
+  width: 100%;
+  min-height: 74px;
+  padding: 7px 16px 7px 8px;
+  border: 1px solid rgba(243, 232, 207, 0.65);
+  border-radius: 12px;
+  background: rgba(31, 21, 14, 0.82);
+  color: var(--cream);
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  transition:
+    transform 0.16s ease,
+    background 0.16s ease,
+    border-color 0.16s ease;
+}
+
+.song-button:hover {
+  transform: translateY(-2px);
+  background: rgba(51, 34, 21, 0.94);
+  border-color: rgba(255, 246, 220, 0.95);
+}
+
+.song-button.playing {
+  background: rgba(35, 127, 131, 0.92);
+  border-color: rgba(255, 255, 255, 0.9);
+}
+
+.song-play-icon {
+  display: grid;
+  place-items: center;
+  width: 43px;
+  height: 43px;
+  border: 1px solid rgba(243, 232, 207, 0.75);
+  border-radius: 50%;
+  background: rgba(155, 52, 44, 0.94);
+  font-size: 1rem;
+  padding-left: 3px;
+}
+
+.song-button.playing .song-play-icon {
+  background: rgba(194, 139, 34, 0.95);
+  padding-left: 0;
+}
+
+.song-information {
+  padding-left: 7px;
+}
+
+.song-information strong {
+  display: block;
+  font-family: Rye, Georgia, serif;
+  font-size: clamp(0.95rem, 2.8vw, 1.22rem);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.song-information small {
+  display: block;
+  margin-top: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.78rem;
+  opacity: 0.78;
+}
+
+.music-credit {
+  margin-top: 25px;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.13em;
+  opacity: 0.85;
+}
+
+body.music-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 620px) {
+  .music-modal-panel {
+    width: 94%;
+    height: 90vh;
+    margin: 5vh auto;
+    background-position: center center;
+  }
+
+  .music-modal-content {
+    justify-content: flex-start;
+    padding-top: 62px;
+  }
+
+  .music-modal-logo {
+    width: 82%;
+    max-height: 135px;
+  }
+
+  .song-button {
+    grid-template-columns: 49px 1fr;
+    min-height: 70px;
+    padding-right: 10px;
+  }
+
+  .song-play-icon {
+    width: 39px;
+    height: 39px;
+  }
+}
