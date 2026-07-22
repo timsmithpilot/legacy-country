@@ -65,25 +65,19 @@
     <span class="arrow">›</span>
   </button>
 
-  <a class="action-card gold" href="#book">
+  <button class="action-card gold" type="button" data-open-book>
     <span class="icon-box">▣</span>
     <span class="action-text">
-      <strong>BOOK LEGACY</strong>
-      <small>Parties • Festivals • Events</small>
+        <strong>BOOK LEGACY</strong>
+        <small>Parties • Festivals • Events</small>
     </span>
     <span class="arrow">›</span>
-  </a>
+</button>
 
 </section>
 
 
-    <section class="content-panel booking" id="book">
-      <p class="eyebrow">BOOK LEGACY</p>
-      <h2>Bring live country music to your event.</h2>
-      <p>Available for fairs, festivals, churches, community gatherings, private parties and family-friendly events.</p>
-      <a class="contact-button" href="mailto:timsmithpilot@gmail.com?subject=Booking%20Legacy">Contact Us About a Date</a>
-      <p class="edit-note"><strong></strong> in <code>index.html</code> with your booking email.</p>
-    </section>
+    
   </main>
 
   <footer>
@@ -216,6 +210,75 @@
       </p>
     </div>
   </div>
+</div>
+<div class="book-modal" id="book-modal" aria-hidden="true">
+
+<div class="book-modal-backdrop" data-close-book></div>
+
+<div class="book-modal-panel">
+
+<button
+class="music-close-button"
+type="button"
+data-close-book>
+×
+</button>
+
+<div class="book-modal-content">
+
+<img
+class="music-modal-logo"
+src="images/legacy-logo-cream.png"
+alt="Legacy">
+
+<p class="music-sample-heading">
+BOOK LEGACY
+</p>
+
+<h2>Bring Live Country Music<br>to Your Event</h2>
+
+<p class="book-description">
+
+Legacy performs family-friendly country music for:
+
+</p>
+
+<ul class="booking-list">
+
+<li>County Fairs</li>
+
+<li>Festivals</li>
+
+<li>Church Events</li>
+
+<li>Community Celebrations</li>
+
+<li>Private Parties</li>
+
+<li>Corporate Events</li>
+
+<li>Weddings</li>
+
+</ul>
+
+<a
+class="contact-button"
+href="mailto:YOUR-EMAIL-HERE?subject=Booking Legacy">
+
+Request Booking Information
+
+</a>
+
+<p class="music-credit">
+
+We'd love to be part of your next event.
+
+</p>
+
+</div>
+
+</div>
+
 </div>
 
   <script src="script.js"></script>

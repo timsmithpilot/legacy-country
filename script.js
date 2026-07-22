@@ -186,3 +186,24 @@ document.addEventListener("keydown", (event) => {
     closeMusicModal();
   }
 });
+const bookModal=document.getElementById("book-modal");
+
+document
+.querySelectorAll("[data-open-book]")
+.forEach(b=>b.onclick=()=>{
+
+bookModal.classList.add("open");
+
+document.body.classList.add("music-modal-open");
+
+});
+
+document
+.querySelectorAll("[data-close-book]")
+.forEach(b=>b.onclick=()=>{
+
+bookModal.classList.remove("open");
+
+document.body.classList.remove("music-modal-open");
+
+});
