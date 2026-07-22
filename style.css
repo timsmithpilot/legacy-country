@@ -303,84 +303,80 @@ body.music-modal-open {
     height: 39px;
   }
 }
-.book-modal{
-display:none;
-position:fixed;
-inset:0;
-z-index:70;
+.book-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 70;
 }
 
-.book-modal.open{
-display:block;
+.book-modal.open {
+  display: block;
 }
 
-.book-modal-backdrop{
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.82);
-backdrop-filter:blur(6px);
+.book-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(6px);
 }
 
-.book-modal-panel{
+.book-modal-panel {
+  position: relative;
+  width: min(92%, 760px);
+  max-height: 90vh;
+  margin: 5vh auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-radius: 18px;
 
-position:relative;
+  background:
+    linear-gradient(
+      rgba(26, 17, 10, 0.82),
+      rgba(26, 17, 10, 0.82)
+    ),
+    url("images/hero.jpg") center / cover no-repeat;
 
-width:min(92%,760px);
+  border: 2px solid rgba(255, 255, 255, 0.25);
 
-margin:6vh auto;
-
-border-radius:18px;
-
-overflow:hidden;
-
-background:
-linear-gradient(rgba(26,17,10,.82),rgba(26,17,10,.82)),
-url("images/hero.jpg") center/cover;
-
-border:2px solid rgba(255,255,255,.25);
-
-box-shadow:0 30px 80px rgba(0,0,0,.8);
-
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.8);
 }
 
-.book-modal-content{
-
-padding:60px 40px;
-
-text-align:center;
-
-color:var(--cream);
-
+.book-modal-content {
+  min-height: 100%;
+  padding: 60px 40px 80px;
+  text-align: center;
+  color: var(--cream);
 }
 
-.book-description{
-
-max-width:520px;
-
-margin:auto;
-
-line-height:1.7;
-
+.book-description {
+  max-width: 520px;
+  margin: auto;
+  line-height: 1.7;
 }
 
-.booking-list{
-
-list-style:none;
-
-padding:0;
-
-margin:30px auto;
-
-font-size:1.15rem;
-
-line-height:2;
-
+.booking-list {
+  list-style: none;
+  padding: 0;
+  margin: 30px auto;
+  font-size: 1.15rem;
+  line-height: 2;
 }
 
-.booking-list li{
+.booking-list li {
+  padding: 4px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
 
-border-bottom:1px solid rgba(255,255,255,.12);
+@media (max-width: 620px) {
+  .book-modal-panel {
+    width: 94%;
+    max-height: 90vh;
+    margin: 5vh auto;
+  }
 
-padding:4px;
-
+  .book-modal-content {
+    padding: 58px 22px 70px;
+  }
 }
