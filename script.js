@@ -9,11 +9,16 @@ menuButton.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', String(isOpen));
 });
 
-document.querySelectorAll('.top-menu a').forEach(link => {
-  link.addEventListener('click', () => {
+document.querySelectorAll('.top-menu a, .top-menu button').forEach(item => {
+
+  item.addEventListener('click', () => {
+
     menu.classList.remove('open');
+
     menuButton.setAttribute('aria-expanded', 'false');
+
   });
+
 });
 
 function openBand() {
